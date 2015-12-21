@@ -1,0 +1,46 @@
+Ion Sourcery
+=============
+
+Gonna talk about ion sources as a general review of them and the current state of the ion source at the uOttawa lab
+
+* Introduction/History
+	* R. Middleton and the negative ion cookbook. 
+	* ieee paper with rotating disk of cesium and krypton sputtering
+	* NASA cesium gun
+	* cesium sputter source, cut out the krypton
+	* gas source
+* Cesium Sputter Ion Sources
+	* uOttawa HVEE ion source
+		* ionizer, target, cesium shroud, extraction cone, cooling cone
+	* generates negative ions
+	* modelling and improvements
+		* problems:
+			* targets can melt
+			* periodic discharges when doing carbon
+			* uranium has crazy background counts, maybe because of overheating
+			* need more current cuz people wanna do smaller samples
+				* cesium beam misses the sample material.
+				* turning up the cesium to get more current makes things melt
+		* possible improvements: 
+			* (ways to get better precision, efficiency, and to get faster measuring times, and process more samples)
+			* study and understand the cesium beam
+				* make sure the focus of the cesium beam is hitting the target
+					* experiment: move the target back and see how big the spot size is. Find the smallest spot size. This is where the cesium is most intense.
+				* model the source
+					* super beam
+						* one (lorentz) model shows a region where the beam becomes hyperfocused and the current is boosted
+						* Middleton mentions seeing a pale blue plasma ball form after a crater forms in the target
+						* cesium plasma ball theory (Vogel)
+							* plasma ball in the pit of the target in front of the sample can help pull negative ions out and focus the beam
+							* experiment idea (from Xiaolei): Turn on the source and sputter. Put a spectrometer in front of the beam and look for cesium lines when the plasma ball forms.
+			* Improve Cooling
+				* put a flexible spring on the insertion rod so that the target is always making firm contact against the cooling cone, and isnt being jammed crooked. 
+				* chill the cooling fluid (syltherm) so that it pulls more heat out of the system
+			* Target Redesign
+				* go through the different designs we made
+					* copper jacket to improve cooling
+					* bury the target in the base to get the right length to hit the cesium focus
+					* funnel the tip to make loading easier
+					* deepen the sputter pit and leave room in front of the sample so that plasma can form immediately and so that the edges of the pit can catch neutrals to increase the chance that they'll pick up an electron instead of being lost to vacuum pumps.
+* Conclusion
+
