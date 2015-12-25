@@ -171,13 +171,107 @@ The tandem accelerator works by applying a high positive voltage to the
  negative ions must be produced.
 \end_layout
 
+\begin_layout Standard
+In AMS beams of negative ions are produced from sample material that people
+ want to study using a cesium sputter ion source.
+ I give a description of how this kind of source works later in the report.
+ 
+\end_layout
+
+\begin_layout Standard
+The properties of the ion source determine the shape, size, and quality
+ of the outcoming beam, what molecules and ions are present in the beam,
+ the amount of contamination that is occuring between samples (that is,
+ whether material from a previous sample is being left in the source and
+ coming out as a beam while different samples are inserted), how much of
+ the sample material available is actually being used, and the magnitude
+ of the current in the beam.
+ 
+\end_layout
+
+\begin_layout Standard
+These factors can all have a role in the final analysis of the material:
+ the amount of current you obtain affects how long a sample needs to be
+ measured for a desired precision.
+ A 
+\begin_inset Quotes eld
+\end_inset
+
+quick
+\begin_inset Quotes erd
+\end_inset
+
+ time per sample is around 5 minutes, while a 
+\begin_inset Quotes eld
+\end_inset
+
+long
+\begin_inset Quotes erd
+\end_inset
+
+ time can be around an hour.
+ An hour long measuring time becomes impractical when you'd like to analyse
+ hundreds of samples.
+ The molecules and ions that get produced in the source can affect your
+ results for a particular isotope (for example, U
+\begin_inset Formula $^{235}$
+\end_inset
+
+O
+\begin_inset Formula $_{2}^{16,17}$
+\end_inset
+
+ can masquerade as U
+\begin_inset Formula $^{236}$
+\end_inset
+
+O
+\begin_inset Formula $_{2}^{16}$
+\end_inset
+
+ because they have the same mass, which can add a false signal when counting
+ U
+\begin_inset Formula $^{236}$
+\end_inset
+
+ atoms.) How much of a sample is actually being used (and how deeply the
+ cesium beam penetrates the target) is important when a sample is very small
+ to begin with.
+ How much of it is wasted to vacuum or deposited in the source? How much
+ of it never gets hit by the cesium beam? 
+\end_layout
+
+\begin_layout Standard
+This report will largely be a discussion of the impact the properties of
+ the ion source has on the analysis of sample material.
+ This report will also overview problems that arise when measuring difficult
+ samples, like small Carbon samples or Uranium samples.
+ We'll also discuss how different designs of the ion source (including the
+ geometry and engineering of the components) can solve the problems that
+ we see when operating the source.
+ 
+\end_layout
+
+\begin_layout Standard
+To begin we'll look at the history of the development of ion sources.
+ 
+\end_layout
+
 \begin_layout Section
 Cesium Sputter Ion Source
 \end_layout
 
 \begin_layout Standard
-Figure shows a schematic of the cesium sputter ion source used at uOttawa
- as well as a photo of it from the side.
+Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:uOttawa's-Cesium-Sputter"
+
+\end_inset
+
+ shows a schematic of the cesium sputter ion source used at uOttawa as well
+ as a photo of it from the side.
+ 
 \end_layout
 
 \begin_layout Standard
@@ -188,6 +282,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
+\align center
 a) 
 \begin_inset Graphics
 	filename pics/sourceSchematic1.jpg
@@ -208,6 +303,12 @@ a)
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:uOttawa's-Cesium-Sputter"
+
+\end_inset
+
 uOttawa's Cesium Sputter Ion Source, manufactured by HVEE
 \end_layout
 
@@ -216,13 +317,61 @@ uOttawa's Cesium Sputter Ion Source, manufactured by HVEE
 
 \end_layout
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+A target containing sample material is pushed into the source by a rod with
+ a magnet on the tip.
+ The target is screwed onto a base made of magnetic steel so that it is
+ held by the rod.
+ Once inside the source the target makes contact with a plate that is held
+ at -35kV.
+ Because the target is conducting, it also takes on the -35kV.
+ This attracts the cesium ions to the target.
+ Around the target inside the source is a field-shaping electrode: a thin
+ ring of conductor that protrudes forward.
+ This electrode is used to 'squeeze' the cesium beam onto the sample material
+ in the target.
+ 
+\end_layout
+
+\begin_layout Standard
+The cesium is stored in a reservoir outside the source, and is connected
+ to the source by a pipe that feeds into the cesium shroud.
+ When the source is on, a jacket heats the cesium reservoir until cesium
+ vapor forms and travels up the feed pipe to the shroud.
+ The shroud covers the edges of the ionizer and has pores that the cesium
+ vapor exits out of and onto the ionizer.
+ 
+\end_layout
+
+\begin_layout Standard
+The ionizer is a metallic spherical surface made of molybdenum that is held
+ at -28kV (along with the shroud) and is heated to hundreds of degrees.
+ When the cesium vapor makes contact with the hot ionizer, it can lose its
+ lone valence electron, leaving it positively charged.
+ This is how the positively charged cesium beam is formed.
+ 
+\end_layout
+
+\begin_layout Standard
+The cesium beam is attracted to the target by the field between the ionizer
+ and the target.
+ When the cesium beam strikes the sample material in the target, it is sputtered
+, and clouds of debris can be ejected.
+ These particles can pick up an electron (from the surroundings or from
+ the electrons left behind by the cesium) and become negatively charged.
+ These negative ions are pulled the opposite direction of the cesium and
+ can pass through a hole in the center of the ionizer onto the extraction
+ cone, which is held at ground voltage.
+ This helps shape the outcoming negative beam, which can now be shaped and
+ focused by einzel lenses, separated based on the energies present in the
+ beam by the curved surfaces of an electrostatic analyzer, and bent even
+ further based on the masses of the particles in the beam by a large magnet.
+ 
 \end_layout
 
 \end_body
