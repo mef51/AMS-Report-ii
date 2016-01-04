@@ -24,7 +24,7 @@
 \output_sync 0
 \bibtex_command default
 \index_command default
-\paperfontsize 11
+\paperfontsize 12
 \spacing other 1.5
 \use_hyperref false
 \papersize default
@@ -76,7 +76,7 @@ PHY4902 Work Term Report
 \begin_inset Newline newline
 \end_inset
 
-Ion Sourcery: Ion Sources for AMS
+Ion Sourcery: Ion Sources for Accelerator Mass Spectrometry
 \end_layout
 
 \begin_layout Author
@@ -365,13 +365,244 @@ The cesium beam is attracted to the target by the field between the ionizer
  These particles can pick up an electron (from the surroundings or from
  the electrons left behind by the cesium) and become negatively charged.
  These negative ions are pulled the opposite direction of the cesium and
- can pass through a hole in the center of the ionizer onto the extraction
+ can pass through a hole in the center of the ionizer into the extraction
  cone, which is held at ground voltage.
  This helps shape the outcoming negative beam, which can now be shaped and
  focused by einzel lenses, separated based on the energies present in the
  beam by the curved surfaces of an electrostatic analyzer, and bent even
  further based on the masses of the particles in the beam by a large magnet.
  
+\end_layout
+
+\begin_layout Subsection
+Problems and Issues
+\end_layout
+
+\begin_layout Standard
+The source used by the AMS lab at uOttawa is manufactured by HVEE.
+ There are several problems we encountered using it during the months I
+ was here.
+ This section will describe some of those problems and their consequences.
+\end_layout
+
+\begin_layout Standard
+One of the problems that can occur is melting of the target cathode (the
+ part that holds the sample) during sputtering.
+ This is part of the larger issue of target cooling.
+ When the target is so hot that it melts, sample material can be violently
+ ejected and completely cover the source without being ionized.
+ I talked about this in my last report and described a redesign of the target
+ base so that it was mostly made of copper, which cools faster than steel.
+ 
+\end_layout
+
+\begin_layout Standard
+Another problem that we noticed was a periodic drop in the current coming
+ out of the source when doing carbon samples.
+ This wasn't considered a serious problem until a set of small samples were
+ put into the machine.
+ Every minute or so, the current would drop to zero and quickly recover.
+ The results of this carbon dating run had high uncertainty because of these
+ drops.
+ 
+\end_layout
+
+\begin_layout Standard
+There is also a more general push to obtain higher currents and better efficienc
+y with the source.
+ Higher current means that small carbon samples, as well as iodine samples
+ and uranium samples (i think?) can be measured more quickly.
+ However, while turning up the amount of cesium in the source (by raising
+ the reservoir temperature) is a good way to increase the beam current,
+ targets are more prone to melting damage and especially in the case of
+ uranium, severe contamination of the source.
+ The purpose of the AMS lab is to analyse as many samples as possible as
+ accurately as possible, so this cesium 'limit' so to speak becomes a serious
+ obstacle to the growth of the lab.
+ 
+\end_layout
+
+\begin_layout Standard
+With this desire for higher current, certain flaws in the source are highlighted.
+ For example, one can examine a target after sputtering and notice that
+ the cesium spot size --the location on the target that the cesium beam
+ strikes-- is slightly off center, missing some of the sample material.
+ We also know that the ionizer and the field-shaping electrode serve to
+ focus the cesium beam onto the target, but that the position of the target
+ was only decided upon qualitatively.
+ We already see that the cesium spot size is larger than the diameter of
+ the sample hole.
+ It could very well be that if the target is moved back so that the sample
+ hole coincides with the focus of the cesium beam that the output current
+ will increase.
+ 
+\end_layout
+
+\begin_layout Subsection
+Strategies for Ion Source Improvement
+\end_layout
+
+\begin_layout Standard
+One strategy to improve the performance of the ion source is to study and
+ understand the cesium beam and how it can be optimized to generate more
+ current.
+ 
+\end_layout
+
+\begin_layout Standard
+A simple hypothesis is that the most current is obtained from a sample when
+ the focus of the cesium beam coincides with the surface of the target.
+ Since we already know that the cesium focus is not quite coincident with
+ the position of the target a simple experiment to find the focus can be
+ performed: first produce some targets (out of aluminum for example) that
+ do not have a hole in the center for any sample material, but can otherwise
+ be screwed onto the target base.
+ When these targets are inserted into the source, the cesium will sputter
+ onto it and leave a very clear circular spot on the target surface.
+ We can now shave off different amounts off the top of the target to produce
+ targets of differing heights.
+ When we look at the sizes of the cesium spots we expect targets of the
+ same height to have the same size while the shorter targets will either
+ have smaller or larger spot sizes on them.
+ This can give us an idea of which way the target needs to move (further
+ in or pulled back) to coincide with the cesium focus.
+ This experiment hasn't been done yet but we expect the cesium focus is
+ around 5mm behind where the target currently sits.
+ This kind of experiment is simple to do and gives valuable information
+ that is otherwise difficult to obtain: the source is built so that the
+ target is pushed by a rod until the target base makes contact with a cooling
+ cone inside the source, so setting it up so that the target can be pulled
+ back while its base still makes contact with the cooling cone could require
+ a lot of reengineering.
+\end_layout
+
+\begin_layout Standard
+Another strategy in finding the cesium focus is to model the electrical
+ fields in the source and to simulate the trajectories of cesium and other
+ ions in the source.
+ In my last report I gave an explanation of simulations of the beam line
+ using a program called Simion, a program which does not take into account
+ the effect of space charge: the phenomenon where ions in a beam interact
+ with each other electrically.
+ For the beam line this limitation is acceptable, but inside the source
+ the density of charge is much higher and the space we're interested in
+ much smaller, and ignoring the effect ions have on each other could leave
+ us with a simulation that doesn't correspond to what's observed.
+ It has been observed that after a few minutes of sputtering a small pit
+ in the sample material is dug out and a blue plasma ball forms in the pit,
+ after which the output current increases greatly.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "middleton"
+
+\end_inset
+
+ There are also ideas that the presence of the positive cesium ions right
+ next to the sample helps to pull negative ions and focus the beam.
+ These considerations make a proper ion simulation with space charge very
+ desirable.
+ 
+\end_layout
+
+\begin_layout Standard
+During this work term we worked to learn a software package called Lorentz2E
+ that can do such simulations and to create a basic model of our source.
+ Lorentz2E works by letting you draw some geometry on a two-dimensional
+ plane and then letting you specify the voltages present on the surfaces
+ and shapes you've drawn.
+ Ion emissions are specified by selecting a surface and denoting it as an
+ emitter.
+ You can then say what kinds of ions are being emitted from that surface.
+ So for example, to specify the cesium beam you could draw the arc of a
+ circle to represent the spherical surface of the ionizer and then specify
+ that curved surface as an emitter of Cs+ ions.
+ Once the geometry and emitters are defined, Lorentz2E will calculate the
+ field in the open spaces between the geometry and then the trajectories
+ of the emitted ions.
+ Lorentz2E lets you specify whether or not space charge plays a role.
+ When you tell it to calculate space charge an iterative process begins
+ where the field is calculated, the ions are moved a small distance, the
+ field is recalculated with the new positions of the ions and so on and
+ so forth.
+ Lorentz2E does not let you specify 3-dimensional geometry, but does let
+ you draw images that are then rotated around an axis.
+ This is for systems that are cylindrically symmetric, which is the case
+ for this ion source.
+ To start, we created a model that was just a 2-dimensional cross section
+ of the source.
+ Figure shows the display from Lorentz2E after a simulation with Cs+ and
+ C- ions.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/IonSourceLorentz2ENoted.png
+	lyxscale 50
+	scale 40
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+The HVEE ion source in Lorentz2E
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "1"
+key "middleton"
+
+\end_inset
+
+R.
+ Middleton, 
+\begin_inset Quotes eld
+\end_inset
+
+A Negative-Ion Cookbook
+\begin_inset Quotes erd
+\end_inset
+
+, University of Pennsylvania.
+ October 1989.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "http://www.pelletron.com/cookbook.pdf"
+target "http://www.pelletron.com/cookbook.pdf"
+
+\end_inset
+
+.
+ Retrieved January 4 2016.
 \end_layout
 
 \end_body
