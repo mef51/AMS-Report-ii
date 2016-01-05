@@ -530,8 +530,14 @@ During this work term we worked to learn a software package called Lorentz2E
  for this ion source.
  To start, we created a model that was just a 2-dimensional cross section
  of the source.
- Figure shows the display from Lorentz2E after a simulation with Cs+ and
- C- ions.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:The-HVEE-ion"
+
+\end_inset
+
+ shows the display from Lorentz2E after a simulation with Cs+ and C- ions.
 \end_layout
 
 \begin_layout Standard
@@ -557,6 +563,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:The-HVEE-ion"
+
+\end_inset
+
 The HVEE ion source in Lorentz2E
 \end_layout
 
@@ -572,6 +584,13 @@ The HVEE ion source in Lorentz2E
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+In the figure the carbon ions are moving downward from the target and the
+ cesium ions move upward from the curved surface of the ionizer, focused
+ somewhat towards the target.
+ 
 \end_layout
 
 \begin_layout Bibliography
