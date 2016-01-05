@@ -488,9 +488,10 @@ Another strategy in finding the cesium focus is to model the electrical
  the density of charge is much higher and the space we're interested in
  much smaller, and ignoring the effect ions have on each other could leave
  us with a simulation that doesn't correspond to what's observed.
- It has been observed that after a few minutes of sputtering a small pit
- in the sample material is dug out and a blue plasma ball forms in the pit,
- after which the output current increases greatly.
+ It has been observed by R.
+ Middleton that after a few minutes of sputtering a small pit in the sample
+ material is dug out and a blue plasma ball forms in the pit, after which
+ the output current increases greatly.
 \begin_inset CommandInset citation
 LatexCommand cite
 key "middleton"
@@ -593,6 +594,70 @@ In the figure the carbon ions are moving downward from the target and the
  
 \end_layout
 
+\begin_layout Standard
+There are also ideas that after a certain density of cesium ions something
+ exciting happens: a 
+\begin_inset Quotes eld
+\end_inset
+
+super beam
+\begin_inset Quotes erd
+\end_inset
+
+ forms that is much higher in current and much more focused.
+ This is likely related to the plasma ball that Middleton mentions seeing
+ and the increased current that accompanies it.
+ Testing this experimentally is difficult, increasing the cesium means adding
+ more heat which means the rest of the source needs to be able to handle
+ it.
+ This idea can be seen more readily in simulations however, as done by A.
+ Asi using Lorentz2D in a model of a slightly different cesium sputter source
+ (Figure ).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/AsiFiguresAdapted.png
+	lyxscale 50
+	scale 35
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+No cesium space charge (left) and With cesium space charge (right)
+\begin_inset CommandInset citation
+LatexCommand cite
+key "asi"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
@@ -622,6 +687,35 @@ target "http://www.pelletron.com/cookbook.pdf"
 
 .
  Retrieved January 4 2016.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
+key "asi"
+
+\end_inset
+
+A.
+ Asi, 
+\begin_inset Quotes eld
+\end_inset
+
+Ion Source Modeling with LORENTZ-2D
+\begin_inset Quotes erd
+\end_inset
+
+, Integrated Engineering Software (2001), 
+\begin_inset CommandInset href
+LatexCommand href
+name "www.integratedsoft.com/papers/research/ICIS2001.pdf"
+target "https://www.integratedsoft.com/papers/research/ICIS2001.pdf"
+
+\end_inset
+
+.
+ Retrieved January 5 2016.
 \end_layout
 
 \end_body
