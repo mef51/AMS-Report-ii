@@ -612,7 +612,14 @@ super beam
  it.
  This idea can be seen more readily in simulations however, as done by A.
  Asi using Lorentz2D in a model of a slightly different cesium sputter source
- (Figure ).
+ (Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:No-cesium-space"
+
+\end_inset
+
+).
 \end_layout
 
 \begin_layout Standard
@@ -638,6 +645,12 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:No-cesium-space"
+
+\end_inset
+
 No cesium space charge (left) and With cesium space charge (right)
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -656,6 +669,108 @@ key "asi"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+The figure compares a negative ion beam that is not affected by the space
+ charge of cesium and a beam that is affected and we see that the beam is
+ squeezed narrower by the cesium ions, cancelling some of the self-repelling
+ of the negative ions.
+ Asi also reports that the current in this simulation is at least twice
+ as much with the effect of the cesium space charge.
+ 
+\end_layout
+
+\begin_layout Standard
+In addition to exploring ideas like the effect of the cesium beam on the
+ extracted current Lorentz2E is also useful in designing new geometries
+ for the source and testing them before producing them.
+ We can use Lorentz to find the optimal distances between components but
+ we can also use it to model different shapes of components.
+ The field-shaping electrode we currently use for example, a thin ring that
+ surrounds the space slightly in front of the target and serves to 'squeeze'
+ the cesium beam, has some sharp surfaces that causes the field to change
+ sharply around its edges.
+ These sharp points can throw ions off course, so redesigning the field-shaping
+ electrode is as simple as redrawing its shape in Lorentz and running the
+ simulation.
+ Other important components Lorentz lets us play with are the extraction
+ electrode, the ionizer, and the target cathode.
+\end_layout
+
+\begin_layout Standard
+In the quest for higher current, improving the cooling system is worthwhile
+ because it allows the source to handle a higher amount of cesium without
+ overheating.
+ The essence of the cooling system is this: the target's base has a cone-like
+ surface that makes contact with the source cooling block, which has a matching
+ cone surface, is made of steel, and is hollow.
+ A heat transfer fluid called syltherm flows into the source cooling block
+ to absorb heat.
+ The syltherm is then pumped to a heat exchanger that is cooled by water
+ and the cycle repeats with the syltherm in a closed loop.
+ 
+\end_layout
+
+\begin_layout Standard
+The target base is normally made of steel.
+ During my last work-term we tried redesigning the target base to have a
+ copper jacket so that the thermal conductivity between the base and the
+ source cooling block is higher.
+ This turned out to be helpful but overall not a groundbreaking improvement.
+ 
+\end_layout
+
+\begin_layout Standard
+This term we worked on implementing another idea: chill the syltherm to
+ much lower temperatures so that heat flows more quickly into it.
+ Normally the syltherm is cooled to, at best, the temperature of the water
+ cooling the system, which is around 17-20
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C.
+ If we could cut into the cycle and add an additional heat exchange step
+ to get the syltherm even colder then we can have cooler temperatures in
+ the source.
+ To do this we used an immersion chiller: a smallish box-like refrigerator
+ that has a cold finger on a hose connected to the box.
+ The cold finger is meant to be dumped into a bath of some liquid which
+ is then cooled that way.
+ We had two chillers to work with: the first could cool its finger to -40
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C and the second one we borrowed could reach 
+\begin_inset Formula $-100^{\circ}$
+\end_inset
+
+C.
+ 
+\end_layout
+
+\begin_layout Standard
+We could have set it up so that the syltherm comes from the main pump, is
+ dumped in a bath and cooled by the chiller, and then pumped out of the
+ bath into the source.
+ We didn't have any handy pumps on hand however so we opted to coil 1/4
+\begin_inset Quotes erd
+\end_inset
+
+ diameter copper pipe around the cold finger as tightly as we could, then
+ wrap that with foamy insulation material making sure to have an entry and
+ and exit pipe sticking out that we could connect to.
+ This was all held together with tape.
+ We then cut into the loop by connecting our coil ends onto the syltherm
+ pipes with Swagelock connections (a way of fastening pipes together), turned
+ on the chiller and turned on the source.
+ The syltherm would now flow from the pump, into the coil being cooled by
+ contact with the cold finger, and onto the source.
+ This failed however because the coiling increased the impedence of the
+ flow and the pump couldn't keep the flow rate as high as was required by
+ the software, which tripped an alarm and shut down the source when it detected
+ that the flow was too slow.
+ 
 \end_layout
 
 \begin_layout Bibliography
