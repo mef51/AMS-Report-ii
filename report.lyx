@@ -766,11 +766,381 @@ We could have set it up so that the syltherm comes from the main pump, is
  on the chiller and turned on the source.
  The syltherm would now flow from the pump, into the coil being cooled by
  contact with the cold finger, and onto the source.
- This failed however because the coiling increased the impedence of the
+ This failed however because the coiling increased the impedance of the
  flow and the pump couldn't keep the flow rate as high as was required by
  the software, which tripped an alarm and shut down the source when it detected
  that the flow was too slow.
  
+\end_layout
+
+\begin_layout Standard
+We undid our work and tried a second idea.
+ We made a syltherm bath in a dewar and stuck the cold finger into the bath.
+ Then, we shortened the copper coil to have a lower impedance and immersed
+ the copper coil inside the syltherm bath.
+ The syltherm circulating in the coil would be cooled by the syltherm in
+ the bath being cooled by the chiller.
+ Though the cold finger could get to -100
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C, the syltherm won't freeze.
+ This took a few tries to get right; we had to keep shortening the coil
+ until the flow was fast enough that the pump wouldn't trip.
+ Of course, shortening the coil means the circulating syltherm spends less
+ time in the cold bath, lessening the heat transfer.
+ 
+\end_layout
+
+\begin_layout Standard
+Once the dewar was set up with the coil we covered the top with a tight
+ cap made of aluminum foil.
+ We placed a thermocouple into the bath and turned the source and chiller
+ on.
+ While we could see that the temperature of the bath was quickly dropping
+ to -30
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C (much colder than the ~20
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C without the chiller), there wasn't really any indication that anything
+ had improved inside the source based on the current from some test targets.
+ We needed to know what the temperature was inside the flow so we added
+ to the loop a tee-segment just before entering the source and fed a thermocoupl
+e into the flow of the syltherm through the 't'.
+ The thermocouple was on the end of a thin steel rod that happened to be
+ the right size for a Swagelock fitting and we fastened it to the tee in
+ the usual way.
+ Swagelock works by biting into the material of the pipe (or rod in this
+ case) to form a permanent leak-proof seal.
+ The rod of the thermocouple was fed through the tee and into the middle
+ of the flow of the syltherm, making sure not to touch the metal of the
+ far wall of the pipe, which we checked visually before attaching the tee
+ segment to the syltherm hoses.
+ This way we get accurate temperature measurements of the syltherm in the
+ flow and of the syltherm in the bath and can gauge how well the heat transfer
+ is occuring.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Photos-of-the"
+
+\end_inset
+
+ and 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Temperatures"
+
+\end_inset
+
+ show photos of the cooling setup we built and temperature readings that
+ characterize how well our system is cooling the source.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/chillerExperiment.PNG
+	lyxscale 50
+	scale 80
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Photos-of-the"
+
+\end_inset
+
+Photos of the chiller set up.
+ Note the coil in the bath shown in the upper right image.
+ Also note the thermocouple jutting out of the tee in the lower left image.
+ The lower right image shows the setup in operation.
+ Photos taken by Dr.
+ Chris Charles.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/ChillerTests.png
+	lyxscale 80
+	width 70page%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Temperatures"
+
+\end_inset
+
+Temperatures during chiller test while the source is on.
+ The Neslab chiller refers to the model of our older, first attempt chiller
+ which reaches -40
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C optimally.
+ The Beckman chiller is the better chiller that reaches 
+\begin_inset Formula $-100^{\circ}$
+\end_inset
+
+C.
+ The goal is to make the inline temperature, denoted by the black circles,
+ dip as low as possible.
+ Figure by Dr.
+ Chris Charles.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As can be seen in Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Temperatures"
+
+\end_inset
+
+ the temperature of the syltherm in the flow just before entering the source
+ with the good chiller on is around 
+\begin_inset Formula $12^{\circ}$
+\end_inset
+
+C, while we also know that the cold finger has cooled the syltherm in the
+ bath to 
+\begin_inset Formula $-28^{\circ}$
+\end_inset
+
+C.
+ We can also compare the temperatures from the graph before and after the
+ source is turned on to see that the heat load from the source and after
+ the main heat exchanger (since the syltherm is heated and then cooled before
+ we measure it again in our setup) leaves the syltherm around 2
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+ hotter.
+ This value doesn't seem to change whether the chiller is on or off, also
+ based on the graph.
+ The chiller when turned on in our setup drops the temperature of the inline
+ syltherm by about 
+\begin_inset Formula $6^{\circ}$
+\end_inset
+
+C, which is a little disappointing considering the chiller gets much colder,
+ as shown by the temperature of the bath.
+ 
+\end_layout
+
+\begin_layout Standard
+Improving on this is difficult: we know that we can easily increase the
+ temperature drop by just adding more coil into the bath (this setup has
+ maybe two turns inside the bath) but we know that the syltherm pump will
+ trip if we do that.
+ So we seem to be stuck in having to get a more powerful pump or maybe a
+ second pump placed at the coil.
+ The situation inside the source is also unclear.
+ Ideally we would place a thermocouple inside right in the vicinity of the
+ target, but this has its own problems.
+ The ionizer we know can heat up to 1200
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C so this thermocouple could just melt (unless it's very expensive).
+ A thermocouple inside would also need to be placed so as to not interfere
+ with the electric fields and so as to not erode with time due to sputtering.
+ 
+\end_layout
+
+\begin_layout Standard
+Ultimately the story of cooling has to do with increasing cesium and with
+ limiting the violent ejection of sample material by overheating the target.
+ Failing a thermocouple, the clear indication of an improvement in source
+ cooling will be given by comparing the analysis of a sample that is overheating
+ with one that is well cooled: current should be expected to be more stable,
+ the voltages on the source components will fluctuate less, background signals
+ and counts will be lessened, and less current caused by contamination will
+ be seen.
+ 
+\end_layout
+
+\begin_layout Standard
+Another way to improve the situation in the source is to once again redesign
+ the target base.
+ The last design of a base we created had a copper jacket to improve cooling.
+ But now since we also expect that the cesium focus is behind the current
+ position of the target, a target base that moves the target back could
+ be useful.
+ In order to reduce the amount of machining and re-engineering required,
+ we can embed the target inside the base so that this new base interfaces
+ with the cooling in the HVEE source in the same way.
+ Figure 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Target-Base-Concept"
+
+\end_inset
+
+ shows a drawing of such a concept.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename pics/annotatedTargetBaseConcept.png
+	lyxscale 50
+	scale 20
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Target-Base-Concept"
+
+\end_inset
+
+Target Base Concept
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The target in this concept is clamped down onto the steel base by a large
+ copper jacket, which is screwed onto the base.
+ On the regular bases, the bottom of the target is screwed onto the top
+ of the base, which in this figure would correspond to about the top of
+ the target, so the target here has been pulled back about 5mm compared
+ to the regular base.
+ The base needs to be magnetic to be held by the source's push rod.
+ To allow for dimensions with generous tolerances (to reduce machining costs),
+ we need to assume that there might be some gap between the target and the
+ copper jacket.
+ This gap could trap air and act as a virtual vacuum leak in the system
+ because it could take a long time for air to escape from this gap, so a
+ hole is drilled into the side that should allow air to escape more easily
+ and not interfere with the vacuum.
+ 
+\end_layout
+
+\begin_layout Standard
+An advantage of this concept in addition to better positioning the target
+ in the cesium beam is that the contact between the copper jacket and the
+ target covers a much larger surface area.
+ In the previous design only the bottom surface of the target touched the
+ copper and that surface was a thin ring, to allow room for a threaded hole
+ in the bottom.
+ Here almost the entirety of the surface of the target makes contact with
+ copper, which then makes contact with the cooling system, so we can expect
+ this kind of base to be much better cooled.
+ 
+\end_layout
+
+\begin_layout Standard
+A disadvantage with this base concept is the complexity in sample loading
+ that it adds.
+ Multiple parts need to be kept track of and cleaned, and the targets (which
+ are mass produced and disposable) now have a more complicated shape to
+ machine.
+ This racks up the cost drastically.
+ It could be that these bases would only be useful for special or delicate
+ samples, so that a few of them might be used alongside the regular bases.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+yo
 \end_layout
 
 \begin_layout Bibliography
