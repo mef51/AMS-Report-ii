@@ -442,6 +442,10 @@ With this desire for higher current, certain flaws in the source are highlighted
 Strategies for Ion Source Improvement
 \end_layout
 
+\begin_layout Subsubsection
+Optimize the Cesium Beam
+\end_layout
+
 \begin_layout Standard
 One strategy to improve the performance of the ion source is to study and
  understand the cesium beam and how it can be optimized to generate more
@@ -696,6 +700,10 @@ In addition to exploring ideas like the effect of the cesium beam on the
  simulation.
  Other important components Lorentz lets us play with are the extraction
  electrode, the ionizer, and the target cathode.
+\end_layout
+
+\begin_layout Subsubsection
+Improve the Source's Cooling 
 \end_layout
 
 \begin_layout Standard
@@ -1026,6 +1034,10 @@ Ultimately the story of cooling has to do with increasing cesium and with
  
 \end_layout
 
+\begin_layout Subsubsection
+Change the Target Base (again)
+\end_layout
+
 \begin_layout Standard
 Another way to improve the situation in the source is to once again redesign
  the target base.
@@ -1140,7 +1152,39 @@ Conclusion
 \end_layout
 
 \begin_layout Standard
-yo
+In this report I've given an overview of ion sources and focused on the
+ cesium sputter negative ion source used at the uOttawa AMS Lab.
+ I talked about some of the problems encountered with the source and then
+ described ways to solve those problems and improve the efficiency of the
+ source and reduce the measurement time with it.
+ These included modeling source to understand the cesium beam, an experiment
+ to find where the target needs to be to be in the focus of the cesium beam,
+ a system to chill the syltherm cooling fluid, and a target base concept
+ that improves cooling and brings back the target into the cesium focus.
+ 
+\end_layout
+
+\begin_layout Standard
+Improving the ion source is important for accelerator mass spectrometry
+ because it reduces the measurement time of samples, allowing labs to process
+ more samples, and increases the precision with which samples can be measured
+ by reducing contamination.
+ 
+\end_layout
+
+\begin_layout Standard
+I feel grateful towards Dr.
+ Xiaolei Zhao for the discussions about the target base concept, the cesium
+ beam focus, and for the problems he's encountered with the source.
+ I'm also grateful towards Dr.
+ Chris Charles and Normand St-Jean, Collin Tiessen and Vince Morin for helping
+ setup and test the syltherm chiller and for the general day to day work
+ of the lab.
+ I'm grateful to Dr.
+ Liam Kieser for explanations of the tandem and for introducing me to Solidworks
+ and machining.
+ I feel that I've learned a lot during my time at this lab and that I've
+ been able to contribute meaningfully to the work being done here.
 \end_layout
 
 \begin_layout Bibliography
