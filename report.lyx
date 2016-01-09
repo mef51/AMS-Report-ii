@@ -69,14 +69,22 @@
 
 \begin_layout Title
 
-\series bold
+\emph on
 PHY4902 Work Term Report
+\emph default
+
+\begin_inset Newline newline
+\end_inset
+
+
+\series bold
+Ion Sourcery
 \series default
 
 \begin_inset Newline newline
 \end_inset
 
-Ion Sourcery: Ion Sources for Accelerator Mass Spectrometry
+Generating Ions for Accelerator Mass Spectrometry
 \end_layout
 
 \begin_layout Author
@@ -94,7 +102,7 @@ University of Ottawa
 \end_layout
 
 \begin_layout Date
-December 21, 2015
+January 8, 2016
 \end_layout
 
 \begin_layout Standard
@@ -119,11 +127,11 @@ This report describes my second COOP term at the A.
  Lalonde Accelerator Mass Spectrometry Lab in the ARC building at uOttawa
  and details the topic of ion sources for use with accelerator mass spectrometry
  (AMS).
- I give a history of the development of ion sources and their design and
- then focus on cesium sputter ion sources, which are now widely used for
- AMS.
- I describe the parts of the cesium ion source and then talk about the problems
- we've encountered using it at the A.E.L.
+ I introduce the development of ion sources and their design and then focus
+ on cesium sputter ion sources, which are now widely used for AMS.
+ I describe the parts of the cesium ion source manufactured by High Voltage
+ Engineering Europa (HVEE) and then talk about the problems we've encountered
+ using it at the A.E.L.
  AMS lab.
  I then outline various designs and strategies for solving some of these
  problems.
@@ -248,12 +256,109 @@ This report will largely be a discussion of the impact the properties of
  samples, like small Carbon samples or Uranium samples.
  We'll also discuss how different designs of the ion source (including the
  geometry and engineering of the components) can solve the problems that
- we see when operating the source.
+ we see when operating the source, as well as some other strategies.
+ 
+\end_layout
+
+\begin_layout Subsection
+History
+\end_layout
+
+\begin_layout Standard
+The first mechanism to produce ions for experiments and fun were gas discharge
+ tubes with a perforated cathode.
+ A tube is filled with some kind of gas (say, hydrogen) and on either side
+ of the tube are an anode and a cathode.
+ By perforating the cathode and applying a potential difference of thousands
+ of volts, Eugen Goldstein in 1886 saw rays shoot out of the channels in
+ the cathode.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "history"
+
+\end_inset
+
+ These were positive ions.
+ This 
+\begin_inset Quotes eld
+\end_inset
+
+channel ray tube
+\begin_inset Quotes erd
+\end_inset
+
+ helped create the field of mass spectrometry.
+ The energies of the ions in this beam had a large spread.
+\end_layout
+
+\begin_layout Standard
+In 1913 J.J.
+ Thomson put neon inside the gas discharge tube and analyzed the beam of
+ positive ions using the apparatus he used to determine the mass/charge
+ ratio of the electron.
+ This apparatus bent the ions in the beam and separated them based on their
+ masses.
+ From this he was able to conclude that there were two isotopes of neon
+ present, the first demonstration to show that isotopes existed.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "history"
+
+\end_inset
+
  
 \end_layout
 
 \begin_layout Standard
-To begin we'll look at the history of the development of ion sources.
+From this basic discovery the field of mass spectrometry began and A.
+ J.
+ Dempster in 1917 used a bending magnet to analyze the ion species in a
+ positive beam.
+ Since the magnet deflected ions based on their mass and not their energy
+ he needed an ion source with a low energy spread, and he built an ion source
+ where electrons heated off of a filament would bombard an alkali salt,
+ releasing a positive ion.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "history"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In 1931 K.
+ S.
+ Woodcock generated negative ions by bombarding salts with positive lithium
+ ions from a filament.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "history"
+
+\end_inset
+
+ This led to Secondary Ion Mass Spectrometry (SIMS) which refers to the
+ spectrometry of beams of 'secondary' ions: ions that are ejected from some
+ primary ion beam.
+ 
+\end_layout
+
+\begin_layout Standard
+This roughly brings us to 1962, when Victor Krohn, while working at a company
+ that was developing ion propulsion engines for NASA, suggested using a
+ beam of positive cesium ions as the primary beam in a SIMS-style spectrometer.
+\begin_inset CommandInset citation
+LatexCommand cite
+key "history"
+
+\end_inset
+
+ Cesium was chosen because of its very volatile and easily given up valence
+ electron, which could conceivably increase the yield of negative ions.
+ Krohn used this idea to create beams of negative ions and analysed them.
+ This was the beginning of sputtering cesium onto a sample as a negative
+ ion source.
  
 \end_layout
 
@@ -411,7 +516,7 @@ Another problem that we noticed was a periodic drop in the current coming
 There is also a more general push to obtain higher currents and better efficienc
 y with the source.
  Higher current means that small carbon samples, as well as iodine samples
- and uranium samples (i think?) can be measured more quickly.
+ and uranium samples can be measured more quickly.
  However, while turning up the amount of cesium in the source (by raising
  the reservoir temperature) is a good way to increase the beam current,
  targets are more prone to melting damage and especially in the case of
@@ -1191,6 +1296,37 @@ I feel grateful towards Dr.
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
 label "1"
+key "history"
+
+\end_inset
+
+P.
+ Williams, 
+\begin_inset Quotes eld
+\end_inset
+
+Historical Development of Ion Sources for SIMS
+\begin_inset Quotes erd
+\end_inset
+
+.
+ Arizona State University.
+ 
+\begin_inset CommandInset href
+LatexCommand href
+name "www.simsworkshop.org/annualworkshops/workshop2013/Historyof_ion_sourcesfor_SIMS.pdf"
+target "http://www.simsworkshop.org/annualworkshops/workshop2013/Historyof_ion_sourcesfor_SIMS.pdf"
+
+\end_inset
+
+.
+ Retrieved January 8 2016.
+\end_layout
+
+\begin_layout Bibliography
+\begin_inset CommandInset bibitem
+LatexCommand bibitem
+label "2"
 key "middleton"
 
 \end_inset
@@ -1221,7 +1357,7 @@ target "http://www.pelletron.com/cookbook.pdf"
 \begin_layout Bibliography
 \begin_inset CommandInset bibitem
 LatexCommand bibitem
-label "2"
+label "3"
 key "asi"
 
 \end_inset
