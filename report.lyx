@@ -314,7 +314,7 @@ From this basic discovery the field of mass spectrometry began and A.
  J.
  Dempster in 1917 used a bending magnet to analyze the ion species in a
  positive beam.
- Since the magnet deflected ions based on their mass and not their energy
+ Since the magnet deflected ions based on their mass as well as their energy
  he needed an ion source with a low energy spread, and he built an ion source
  where electrons heated off of a filament would bombard an alkali salt,
  releasing a positive ion.
@@ -339,8 +339,8 @@ key "history"
 \end_inset
 
  This led to Secondary Ion Mass Spectrometry (SIMS) which refers to the
- spectrometry of beams of 'secondary' ions: ions that are ejected from some
- primary ion beam.
+ spectrometry of beams of 'secondary' ions: ions that are ejected from a
+ sample bombarded a primary ion beam.
  
 \end_layout
 
@@ -455,7 +455,11 @@ The cesium is stored in a reservoir outside the source, and is connected
 
 \begin_layout Standard
 The ionizer is a metallic spherical surface made of molybdenum that is held
- at -28kV (along with the shroud) and is heated to hundreds of degrees.
+ at -28kV (along with the shroud) and is heated to around 1200
+\begin_inset Formula $^{\circ}$
+\end_inset
+
+C.
  When the cesium vapor makes contact with the hot ionizer, it can lose its
  lone valence electron, leaving it positively charged.
  This is how the positively charged cesium beam is formed.
@@ -468,14 +472,15 @@ The cesium beam is attracted to the target by the field between the ionizer
  When the cesium beam strikes the sample material in the target, it is sputtered
 , and clouds of debris can be ejected.
  These particles can pick up an electron (from the surroundings or from
- the electrons left behind by the cesium) and become negatively charged.
+ cesium atoms that neutralized on the surface of the target) and become
+ negatively charged.
  These negative ions are pulled the opposite direction of the cesium and
  can pass through a hole in the center of the ionizer into the extraction
  cone, which is held at ground voltage.
  This helps shape the outcoming negative beam, which can now be shaped and
  focused by einzel lenses, separated based on the energies present in the
  beam by the curved surfaces of an electrostatic analyzer, and bent even
- further based on the masses of the particles in the beam by a large magnet.
+ further based on the momenta of the particles in the beam by a large magnet.
  
 \end_layout
 
@@ -534,7 +539,7 @@ With this desire for higher current, certain flaws in the source are highlighted
  strikes-- is slightly off center, missing some of the sample material.
  We also know that the ionizer and the field-shaping electrode serve to
  focus the cesium beam onto the target, but that the position of the target
- was only decided upon qualitatively.
+ is not quite at the focus of the cesium beam.
  We already see that the cesium spot size is larger than the diameter of
  the sample hole.
  It could very well be that if the target is moved back so that the sample
@@ -594,9 +599,10 @@ Another strategy in finding the cesium focus is to model the electrical
  the effect of space charge: the phenomenon where ions in a beam interact
  with each other electrically.
  For the beam line this limitation is acceptable, but inside the source
- the density of charge is much higher and the space we're interested in
- much smaller, and ignoring the effect ions have on each other could leave
- us with a simulation that doesn't correspond to what's observed.
+ the density of charge is much higher, the space we're interested in much
+ smaller, and the ions moving much slower, and ignoring the interactions
+ between ions could leave us with a simulation that doesn't correspond to
+ what's observed.
  It has been observed by R.
  Middleton that after a few minutes of sputtering a small pit in the sample
  material is dug out and a blue plasma ball forms in the pit, after which
@@ -620,6 +626,8 @@ During this work term we worked to learn a software package called Lorentz2E
  Lorentz2E works by letting you draw some geometry on a two-dimensional
  plane and then letting you specify the voltages present on the surfaces
  and shapes you've drawn.
+ It also lets you model geometries with cylindrical symmetry for three-dimension
+al simulations.
  Ion emissions are specified by selecting a surface and denoting it as an
  emitter.
  You can then say what kinds of ions are being emitted from that surface.
@@ -838,7 +846,7 @@ The target base is normally made of steel.
 This term we worked on implementing another idea: chill the syltherm to
  much lower temperatures so that heat flows more quickly into it.
  Normally the syltherm is cooled to, at best, the temperature of the water
- cooling the system, which is around 17-20
+ cooling the system, which is around 17-18
 \begin_inset Formula $^{\circ}$
 \end_inset
 
@@ -924,9 +932,9 @@ C without the chiller), there wasn't really any indication that anything
  We needed to know what the temperature was inside the flow so we added
  to the loop a tee-segment just before entering the source and fed a thermocoupl
 e into the flow of the syltherm through the 't'.
- The thermocouple was on the end of a thin steel rod that happened to be
- the right size for a Swagelock fitting and we fastened it to the tee in
- the usual way.
+ The thermocouple was on the end of a thin steel rod that was bought to
+ be the right size for a Swagelock fitting and we fastened it to the tee
+ in the usual way.
  Swagelock works by biting into the material of the pipe (or rod in this
  case) to form a permanent leak-proof seal.
  The rod of the thermocouple was fed through the tee and into the middle
@@ -936,7 +944,7 @@ e into the flow of the syltherm through the 't'.
  This way we get accurate temperature measurements of the syltherm in the
  flow and of the syltherm in the bath and can gauge how well the heat transfer
  is occuring.
- Figure 
+ Figures 
 \begin_inset CommandInset ref
 LatexCommand ref
 reference "fig:Photos-of-the"
@@ -950,9 +958,7 @@ reference "fig:Temperatures"
 
 \end_inset
 
- show photos of the cooling setup we built and temperature readings that
- characterize how well our system is cooling the source.
- 
+ show photos of the cooling setup we built and the temperatures.
 \end_layout
 
 \begin_layout Standard
@@ -1214,7 +1220,7 @@ The target in this concept is clamped down onto the steel base by a large
  copper jacket, which is screwed onto the base.
  On the regular bases, the bottom of the target is screwed onto the top
  of the base, which in this figure would correspond to about the top of
- the target, so the target here has been pulled back about 5mm compared
+ the target, so the target here has been pulled back about 10mm compared
  to the regular base.
  The base needs to be magnetic to be held by the source's push rod.
  To allow for dimensions with generous tolerances (to reduce machining costs),
@@ -1234,9 +1240,9 @@ An advantage of this concept in addition to better positioning the target
  In the previous design only the bottom surface of the target touched the
  copper and that surface was a thin ring, to allow room for a threaded hole
  in the bottom.
- Here almost the entirety of the surface of the target makes contact with
- copper, which then makes contact with the cooling system, so we can expect
- this kind of base to be much better cooled.
+ Here the entire bottom of the target and the top of the horizontal step
+ makes firm contact with copper, which then makes contact with the cooling
+ system, so we can expect this kind of base to be much better cooled.
  
 \end_layout
 
